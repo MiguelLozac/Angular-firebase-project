@@ -1,0 +1,26 @@
+<div class="container text-center">
+    <h1>A-1</h1>
+    <div>
+        <label for="">User Name</label>
+        <input type="text" class="form-control" [(ngModel)]="username">
+        <p>{{ username }}</p>
+        <button class="btn btn-primary" [disabled]="username === ''"
+        (click)="username = ''">Reset User</button>
+    </div>
+</div>
+<hr>
+<div class="container text-center"> 
+    <h1>A-2</h1>
+    <div >
+        
+        <!--<button class="btn btn-primary" (click)="showSecret = !showSecret">Display Details</button> -->
+<button class="btn btn-primary" (click)="toggles()">Display Details</button> 
+        <p *ngIf="showSecret">Secret password = tuna</p>
+        <div *ngFor="let logItem of log"
+        [ngStyle]="{backgroundColor: logItem >= 5 ? 'blue' : 'transparent'}"
+        [ngClass]="{red : logItem >= 5}"
+        >{{ logItem }}</div>
+    </div>
+</div>
+
+  
