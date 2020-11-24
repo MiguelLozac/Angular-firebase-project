@@ -10,7 +10,7 @@ const appRoutes: Routes = [
     { path: 'auth', component: AuthComponent },
     { path: '**' , redirectTo: '/recipes' },
 
-  ];
+  ]; 
 
 @NgModule({ 
     imports: [RouterModule.forRoot(appRoutes)], 
